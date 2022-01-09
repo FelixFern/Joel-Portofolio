@@ -1,0 +1,95 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Jumbotron */
+.jumbotron {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: url('../img/main-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center; 
+}
+.jumbotron-content { 
+    width: 85%;
+    margin: auto;
+}
+.logo {
+    position: absolute;
+}
+.intro {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.intro h3 { 
+    font-size: 4.5rem;
+    line-height: 0rem;
+    margin: 0;
+    padding: 0;
+}
+.intro h1 {
+    font-size: 5.125rem;
+    line-height: 25px;
+    font-weight: 400;
+}
+.intro span {
+    font-weight: bold;
+}
+.intro p {
+    font-size: 2.25rem;
+    line-height: 0;
+}
+.my-work-btn {
+    text-decoration: none;
+}
+.my-work-btn p{
+    transition: .8s;
+
+    font-size: 1.125rem ;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--black-1);
+    padding: 20px;
+}
+.my-work-btn p:hover {
+    transition: .8s;
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+/* Selected Work */
+.selected-work-head {
+    background-color: var(--black-1);
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    padding: 0.25% 0;
+}
+.selected-work-head-content {
+    color: white;
+    width: 85%;
+    margin: auto;
+}
+.selected-work-head-content h1 {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+}
+.selected-work-head-content .shadow {
+    position: absolute;
+    font-size: 4.5rem;
+    line-height: 4rem;
+    margin-top: -1rem;
+    padding: 0;
+    margin-left: -5%;
+    opacity: .1;
+}
