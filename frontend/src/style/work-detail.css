@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--black-1);
+}
+html {
+    scroll-snap-type: y mandatory;
+}
+.work-detail-content {
+    animation: fade-page 1s ease-in;
+}
+.work-detail-content {
+    height: fit-content;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+.back-btn {
+    transition: 0.8s;
+    margin-top: 20px;
+    text-decoration: none;
+    position: fixed;
+    z-index: 99;
+    color: white;
+}
+.back-btn h1 {
+    font-size: 1.5rem;
+}
+.back-btn:hover {
+    transition: 0.8s;
+    transform: translateY(-2px);
+    opacity: .8;
+}
+.thumbnail-img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    opacity: .2;
+    z-index: 1;
+}
+.work-detail-content-container {
+    padding: 10% 0;
+    width: 85%;
+    height: fit-content;
+    display: flex;
+    column-gap: 50px;
+    position: absolute;
+    z-index: 98;
+}
+.youtube-embed {
+    z-index: 2;
+}
+.youtube-embed iframe {
+    width: 80vh;
+    height: 45vh;
+}
+.work-detail-content-container > * {
+    color: white;
+}
+.work-detail-content-container h1 { 
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: -10px;
+}
+.work-detail-content-container .desc { 
+    font-size: 0.75rem;
+    line-height: 0.7rem;
+}

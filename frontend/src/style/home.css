@@ -1,12 +1,21 @@
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
 body {
     padding: 0;
     margin: 0;
     width: 100vw;
     overflow-x: hidden;
 }
+.home-content {
+    animation: fade-page 1s ease-in;
+}
 
 /* Jumbotron */
-.jumbotron {
+/* .jumbotron {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -20,9 +29,16 @@ body {
 .jumbotron-content { 
     width: 85%;
     margin: auto;
+} */
+.logo-container {
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
 }
 .logo {
-    position: absolute;
+    position: fixed;
+    z-index: 99;
 }
 .intro {
     position: absolute;
@@ -52,7 +68,6 @@ body {
 }
 .my-work-btn p{
     transition: .8s;
-
     font-size: 1.125rem ;
     font-weight: bold;
     color: white;
@@ -68,28 +83,40 @@ body {
 }
 
 /* Selected Work */
-.selected-work-head {
-    background-color: var(--black-1);
-    margin: 0;
-    width: 100vw;
-    height: fit-content;
-    padding: 0.25% 0;
+.image-work {
+    position: fixed;
+    width: 120vw;
+    opacity: .25;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    opacity: .2;
 }
-.selected-work-head-content {
-    color: white;
-    width: 85%;
-    margin: auto;
-}
-.selected-work-head-content h1 {
-    font-size: 3.75rem;
-    line-height: 3.75rem;
-}
-.selected-work-head-content .shadow {
+.selected-work-container {
     position: absolute;
-    font-size: 4.5rem;
-    line-height: 4rem;
-    margin-top: -1rem;
-    padding: 0;
-    margin-left: -5%;
+    overflow-y: auto;
+    height: 30%;
+    margin: auto;
+    top: 30%;
+    width: 100%;
+}
+.selected-work-container .detail-link {
+    text-decoration: none;
+}
+.selected-work-container .work-list {
+    transition: 0.8s;
+    margin-left: 7.5%;
+    cursor: pointer;
+    color: white;
     opacity: .1;
 }
+.selected-work-container .current {
+    transition: 0.8s;
+    opacity: 1;
+}
+.selected-work-container::-webkit-scrollbar {
+    width: 0px;
+  }

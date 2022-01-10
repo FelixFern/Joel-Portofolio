@@ -41,7 +41,7 @@ h1, h2, h3 {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 20px;
-  color: black;
+  color: white;
   -webkit-text-stroke: .25px white;
   text-decoration: none;
   text-align: right;
@@ -52,4 +52,13 @@ h1, h2, h3 {
 }
 #current { 
   font-weight: bold;
+}
+
+@keyframes fade-page {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
