@@ -56,7 +56,7 @@ function Home() {
                 <div className='logo-container'>
                     <Link to="/" ><img className='logo' src={Logo}/></Link>
                 </div>
-                <img className='image-work' src={currentWork != null ? "http://localhost:1337" + work_list[currentWork].attributes.thumbnail.data.attributes.url : ""}></img>
+                <img alt="work-image" className='image-work' src={currentWork != null ? "http://localhost:1337" + work_list[currentWork].attributes.thumbnail.data.attributes.url : "http://localhost:1337" + work_list[work_list.length-1].attributes.thumbnail.data.attributes.url}></img>
                 <div className='selected-work-container'>
                     {rev_work_list.map(work => {
                         const work_id = work_list.indexOf(work) + 1

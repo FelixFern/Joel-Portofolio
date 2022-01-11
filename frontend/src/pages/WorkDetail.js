@@ -53,38 +53,40 @@ function WorkDetail() {
     document.title = "Project | " + data.selectedWork.data.attributes.title
 
     return (
-        <div className='work-detail-parent'>
+        <>
             <Navbar></Navbar>
-            <div className='work-detail-content-parent' style={{"background-image": `url(${THUMBNAIL_URL})`}}>
-                <Link to="/" className='back-btn'><h1>{'<'} Back</h1></Link>
-                {/* <img src={THUMBNAIL_URL} className='thumbnail-img'></img> */}
-                <div className='work-detail-content-container'>
-                    <div className='work-detail-content'>
-                        <div className='youtube-embed'>
-                            <iframe src={data.selectedWork.data.attributes.youtube} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div>
-                            <div className='work-detail-title'>
-                                <h1>{data.selectedWork.data.attributes.title}</h1>
-                                <p>{data.selectedWork.data.attributes.year} | {data.selectedWork.data.attributes.genre}</p>
-                                <ReactMarkdown className='desc'>{data.selectedWork.data.attributes.desc}</ReactMarkdown>
+            <div className='work-detail-parent'>
+                <div className='work-detail-content-parent' style={{"background-image": `url(${THUMBNAIL_URL})`}}>
+                    <Link to="/" className='back-btn'><h1>{'<'} Back</h1></Link>
+                    {/* <img src={THUMBNAIL_URL} className='thumbnail-img'></img> */}
+                    <div className='work-detail-content-container'>
+                        <div className='work-detail-content'>
+                            <div className='youtube-embed'>
+                                <iframe src={data.selectedWork.data.attributes.youtube} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div>
+                                <div className='work-detail-title'>
+                                    <h1>{data.selectedWork.data.attributes.title}</h1>
+                                    <p>{data.selectedWork.data.attributes.year} | {data.selectedWork.data.attributes.genre}</p>
+                                    <ReactMarkdown className='desc'>{data.selectedWork.data.attributes.desc}</ReactMarkdown>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                <div className='image-gallery-parent'>
+                    <div className='image-gallery'>
+                        {image_list.map(image => {
+                            const IMG_URL = URL + image.attributes.url
+                            return(
+                                <img src={IMG_URL} className='image'></img>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
-            <div className='image-gallery-parent'>
-                <div className='image-gallery'>
-                    {image_list.map(image => {
-                        const IMG_URL = URL + image.attributes.url
-                        return(
-                            <img src={IMG_URL} className='image'></img>
-                        )
-                    })}
-                </div>
-            </div>
-        </div>
+        </>
+        
     )
 }
 

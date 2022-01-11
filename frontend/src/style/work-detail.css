@@ -1,13 +1,3 @@
-body {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    overflow-x: hidden;
-    background-color: var(--black-1);
-}
-html {
-    scroll-snap-type: y mandatory;
-}
 .work-detail-content-parent {
     animation: fade-page 1s ease-in;
 }

@@ -1,0 +1,37 @@
+.works-parent {
+    animation: fade-page 1s ease-in;
+}
+.works-parent .selector {
+    display: flex;
+    position: absolute;
+    top: 3%;
+    width: fit-content;
+    column-gap: 30px;
+    margin-left: 7.5%;
+}
+.works-parent .selector h1 {
+    width: 4.25rem;
+    font-weight: 400;
+    text-align: center;
+    transition: 0.5s ease;
+    font-size: 1.25rem;
+    padding-bottom: 8px;
+    -webkit-text-stroke: .5px var(--black-1);
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    cursor: pointer;
+}
+
+.works-parent .selector h1:hover {
+    border-bottom: 1px solid white;
+}
+.works-parent .selector .current {
+    transition: .8s;
+    font-weight: bold;
+    border-bottom: 1.5px solid white;
+}
+.works-content-parent {
+    width: 100vw;
+    height: 100vh;
+}
