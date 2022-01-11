@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motions",
+  "info": {
+    "singularName": "motion",
+    "pluralName": "motions",
+    "displayName": "Motion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    }
+  }
+}
