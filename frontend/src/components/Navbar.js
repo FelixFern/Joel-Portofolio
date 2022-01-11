@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-
 function Navbar() {
     const location = useLocation()
     return (
         <nav className='navbar'>
             <ul>
                 <li>
-                    <Link to="/" id={(!location.pathname.includes('about') && !location.pathname.includes('journal')) ? "current" : ""}>
+                    <Link to="/" id={(!location.pathname.includes('about') && !location.pathname.includes('journal')  && !location.pathname.includes("works")) ? "current" : ""}>
                         <p>Home</p>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/works" id={location.pathname.includes('works') ? "current" : ""}> 
+                        <p>Works</p>
                     </Link>
                 </li>
                 <li>

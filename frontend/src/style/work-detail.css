@@ -8,18 +8,22 @@ body {
 html {
     scroll-snap-type: y mandatory;
 }
-.work-detail-content {
+.work-detail-content-parent {
     animation: fade-page 1s ease-in;
 }
-.work-detail-content {
+.work-detail-content-parent {
     height: fit-content;
-    width: 85%;
+    background-size: cover;
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
+
 .back-btn {
     transition: 0.8s;
+    -webkit-text-stroke: .5px var(--black-1);
     margin-top: 20px;
+    margin-left: 7.5%;
     text-decoration: none;
     position: fixed;
     z-index: 99;
@@ -34,7 +38,9 @@ html {
     opacity: .8;
 }
 .thumbnail-img {
-    height: 100%;
+    width: 120vw;
+    height: 20vh;
+    object-fit: cover;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -42,15 +48,19 @@ html {
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     opacity: .2;
-    z-index: 1;
+    z-index: -1;
 }
 .work-detail-content-container {
-    padding: 10% 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.work-detail-content {
     width: 85%;
+    margin: auto;
+    padding: 10% 0;
     height: fit-content;
     display: flex;
     column-gap: 50px;
-    position: absolute;
     z-index: 98;
 }
 .youtube-embed {
@@ -60,15 +70,32 @@ html {
     width: 80vh;
     height: 45vh;
 }
-.work-detail-content-container > * {
+.work-detail-content > * {
     color: white;
 }
-.work-detail-content-container h1 { 
+.work-detail-content h1 { 
     font-size: 1.5rem;
     line-height: 1.5rem;
     margin-bottom: -10px;
 }
-.work-detail-content-container .desc { 
+.work-detail-content .desc { 
     font-size: 0.75rem;
     line-height: 0.7rem;
+}
+
+.image-gallery-parent {
+    background-color: white;
+}
+.image-gallery {
+    width: 85%;
+    margin: auto;
+    padding: 2% 0;
+    text-align: center;
+}
+.image {
+    margin: 0.5%;
+    object-fit: cover;
+    width: 40vw;
+    height: 22.5vw;
+    padding: 0;
 }

@@ -39,16 +39,19 @@ h1, h2, h3 {
 }
 .navbar ul li a {
   font-size: 1.25rem;
-  font-weight: 500;
   line-height: 20px;
   color: white;
-  -webkit-text-stroke: .25px white;
+  -webkit-text-stroke: .5px var(--black-1);
   text-decoration: none;
   text-align: right;
 }
-.navbar ul li a:hover {
+.navbar ul li a p {
   transition: 0.5s;
-  font-weight: bold;
+}
+.navbar ul li a p:hover {
+  transition: 0.5s;
+  transform: translateX(-3px);
+  opacity: .5;
 }
 #current { 
   font-weight: bold;

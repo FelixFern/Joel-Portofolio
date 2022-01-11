@@ -14,22 +14,6 @@ body {
     animation: fade-page 1s ease-in;
 }
 
-/* Jumbotron */
-/* .jumbotron {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
-    background: url('../img/main-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center; 
-}
-.jumbotron-content { 
-    width: 85%;
-    margin: auto;
-} */
 .logo-container {
     width: 85%;
     margin: auto;
@@ -37,55 +21,21 @@ body {
     height: fit-content;
 }
 .logo {
+    transition: 0.8s;
     position: fixed;
     z-index: 99;
 }
-.intro {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.intro h3 { 
-    font-size: 4.5rem;
-    line-height: 0rem;
-    margin: 0;
-    padding: 0;
-}
-.intro h1 {
-    font-size: 5.125rem;
-    line-height: 25px;
-    font-weight: 400;
-}
-.intro span {
-    font-weight: bold;
-}
-.intro p {
-    font-size: 2.25rem;
-    line-height: 0;
-}
-.my-work-btn {
-    text-decoration: none;
-}
-.my-work-btn p{
-    transition: .8s;
-    font-size: 1.125rem ;
-    font-weight: bold;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--black-1);
-    padding: 20px;
-}
-.my-work-btn p:hover {
-    transition: .8s;
+.logo:hover {
+    transition: 0.8s;
     transform: translateY(-2px);
-    opacity: .9;
+    opacity: .8;
 }
-
 /* Selected Work */
 .image-work {
     position: fixed;
-    width: 120vw;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
     opacity: .25;
     z-index: -1;
     left: 50%;
@@ -93,19 +43,20 @@ body {
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    opacity: .2;
+    opacity: 0.25;
 }
 .selected-work-container {
     position: absolute;
     overflow-y: auto;
     height: 30%;
     margin: auto;
-    top: 30%;
+    top: 35%;
     width: 100%;
 }
 .selected-work-container .detail-link {
     text-decoration: none;
 }
+
 .selected-work-container .work-list {
     transition: 0.8s;
     margin-left: 7.5%;
@@ -119,4 +70,16 @@ body {
 }
 .selected-work-container::-webkit-scrollbar {
     width: 0px;
-  }
+}
+.selected-work-container .detail-link:hover + .black-screen {
+    opacity: 0;
+}
+
+@keyframes fade-in-out {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .25;
+    }
+}
