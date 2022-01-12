@@ -130,7 +130,7 @@ function Works() {
     }, [])
     return (
         <>
-            <Navbar></Navbar>
+            <Navbar color="white"></Navbar>
             <div className='works-parent'>
                 <div className='selector'>
                     <h1 onClick={() => {
@@ -142,6 +142,11 @@ function Works() {
                 </div>
                 <div className='works-content-parent'>
                     <WorksContainer view={workView}></WorksContainer>
+                    <WorksContainer view={workView}></WorksContainer>
+
+                    <WorksContainer view={workView}></WorksContainer>
+
+
                 </div>
             </div>
         </>

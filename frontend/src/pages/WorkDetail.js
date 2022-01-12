@@ -54,7 +54,7 @@ function WorkDetail() {
 
     return (
         <>
-            <Navbar></Navbar>
+            <Navbar color="white"></Navbar>
             <div className='work-detail-parent'>
                 <div className='work-detail-content-parent' style={{"background-image": `url(${THUMBNAIL_URL})`}}>
                     <Link to="/" className='back-btn'><h1>{'<'} Back</h1></Link>

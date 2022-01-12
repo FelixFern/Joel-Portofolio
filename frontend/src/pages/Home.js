@@ -51,7 +51,7 @@ function Home() {
     
     return (
         <div className='home-parent'>
-            <Navbar></Navbar>
+            <Navbar color="white"></Navbar>
             <div className='home-content'>
                 <div className='logo-container'>
                     <Link to="/" ><img className='logo' src={Logo}/></Link>

@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 function Journal() {
     return (
         <div className='journal-parent'>
-            <Navbar></Navbar>
+            <Navbar  color="black"></Navbar>
         </div>
     )
 }

@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { MdSegment } from "react-icons/md";
 
-function Hamburger(props) {
-    if (props.hamburgerState == false) {
-        return(
-            <MdSegment></MdSegment>
-        )
-    }
-}
+// function Hamburger(props) {
+//     if (props.hamburgerState == false) {
+//         return(
+//             <MdSegment></MdSegment>
+//         )
+//     }
+// }
 
 
-function Navbar() {
+function Navbar(props) {
     const [hamburger, setHamburger] = useState(false)
     const location = useLocation()
     return (
@@ -20,22 +19,22 @@ function Navbar() {
                 <ul>
                     <li>
                         <Link to="/" id={(!location.pathname.includes('about') && !location.pathname.includes('journal')  && !location.pathname.includes("works")) ? "current" : ""}>
-                            <p>Home</p>
+                            <p style={{"color" : props.color}}>Home</p>
                         </Link>
                     </li>
                     <li>
                         <Link to="/works" id={location.pathname.includes('works') ? "current" : ""}> 
-                            <p>Works</p>
+                            <p style={{"color" : props.color}}>Works</p>
                         </Link>
                     </li>
                     <li>
                         <Link to="/about" id={location.pathname.includes('about') ? "current" : ""}>
-                            <p>About</p>
+                            <p style={{"color" : props.color}}>About</p>
                         </Link>
                     </li>
                     <li>
                         <Link to="/journal" id={location.pathname.includes('journal') ? "current" : ""}> 
-                            <p>Journal</p>
+                            <p style={{"color" : props.color}}>Journal</p>
                         </Link>
                     </li>
 

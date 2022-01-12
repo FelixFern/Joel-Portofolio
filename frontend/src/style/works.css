@@ -1,5 +1,5 @@
 .works-parent {
-    animation: fade-page 1s ease-in;
+    animation: fade-page .8s ease-in;
 }
 .works-parent .selector {
     display: flex;
@@ -81,13 +81,13 @@
     opacity: 1;
 }
 .still {
-    padding: 1vw;
+    padding: 0.25vw;
     position: relative;
-    width: 16.75vw;
+    width: 32.5vw;
     height: fit-content;
     text-align: center;
 }
 .still img {
-    width: 16.75vw;
+    width: 32.5vw;
     height: auto;
 }
