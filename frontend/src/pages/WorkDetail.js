@@ -77,9 +77,10 @@ function WorkDetail() {
                 <div className='image-gallery-parent'>
                     <div className='image-gallery'>
                         {image_list.map(image => {
+                            const image_id = image_list.indexOf(image)
                             const IMG_URL = URL + image.attributes.url
                             return(
-                                <img src={IMG_URL} className='image'></img>
+                                <img key={image_id} src={IMG_URL} className='image'></img>
                             )
                         })}
                     </div>

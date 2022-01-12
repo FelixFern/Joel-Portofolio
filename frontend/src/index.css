@@ -45,7 +45,7 @@ h1, h2, h3 {
   list-style-type: none;
 }
 .navbar ul li a {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 20px;
   color: white;
   -webkit-text-stroke: .5px var(--black-1);

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "still",
     "pluralName": "stills",
-    "displayName": "Still"
+    "displayName": "Still",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

@@ -28,13 +28,53 @@ const MOTIONS = gql`
 
 `
 
+const STILLS = gql`
+    query getMotions {
+            stills {
+                data {
+                    attributes {
+                        thumbnail {
+                            data {
+                                attributes {
+                                    url
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+`
 
 
-// function Still() {
-//     return(
-//         <></>
-//     )
-// }
+function Still() {
+    const URL = "http://localhost:1337"
+    const { loading, error, data } = useQuery(STILLS)
+    console.log(data)
+    if (loading) return <p>Loading</p>
+    if (error) return <p>Error</p>
+
+    const still_list = data.stills.data
+    const rev_still_list = []
+
+    for(let i =  still_list.length - 1; i >= 0; i--) {
+        rev_still_list.push(still_list[i])
+    }
+
+    return(
+        <>
+            {rev_still_list.map(still => {
+                console.log(still)
+                const still_id = rev_still_list.indexOf(still)
+                return (
+                    <div key={still_id} className='work-gallery still'>
+                        <img src={URL + still.attributes.thumbnail.data.attributes.url}></img>
+                    </div>
+                )
+            })}
+        </>
+    )
+}
 
 function Motion() {
     const URL = "http://localhost:1337"
@@ -53,8 +93,9 @@ function Motion() {
     return(
         <>
             {rev_motion_list.map(motion => {
+                const motion_id = rev_motion_list.indexOf(motion) 
                 return (
-                    <a href={motion.attributes.link} target="_blank">
+                    <a key={motion_id} href={motion.attributes.link} target="_blank">
                         <div className='work-gallery'>
                             <div className='work-detail'>
                                 <h1>{motion.attributes.title}</h1>
@@ -69,13 +110,14 @@ function Motion() {
 }
 
 function WorksContainer(props) {
+    console.log(props)
     if (props.view == "motion") {
         return (
             <Motion></Motion>
         )
-    } else {
+    } else if (props.view == "still") {
         return (
-            <></>
+            <Still></Still>
         )
     }
 }

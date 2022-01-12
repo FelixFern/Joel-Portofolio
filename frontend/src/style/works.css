@@ -14,7 +14,7 @@
     font-weight: 400;
     text-align: center;
     transition: 0.5s ease;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-bottom: 8px;
     -webkit-text-stroke: .5px var(--black-1);
     text-decoration: none;
@@ -32,7 +32,8 @@
     border-bottom: 1.5px solid white;
 }
 .works-content-parent {
-    width: 85vw;
+    width: 75vw;
+    z-index: 100;
     position: absolute;
     left: 50%;
     top: 15%;
@@ -43,12 +44,11 @@
 }
 .work-gallery {
     position: relative;
-    z-index: 99;
-    width: 20vw;
-    height: 11.25vw;
+    width: 16.75vw;
+    height: 9.4218vw;
     display: inline-block;
     padding-top: 0;
-    margin-top: -5px;
+    margin: 1vw;
 }
 .work-gallery img{
     width: 100%;
@@ -79,4 +79,15 @@
 .work-detail:hover {
     transition: 0.2s;
     opacity: 1;
+}
+.still {
+    padding: 1vw;
+    position: relative;
+    width: 16.75vw;
+    height: fit-content;
+    text-align: center;
+}
+.still img {
+    width: 16.75vw;
+    height: auto;
 }
