@@ -46,6 +46,7 @@ function Journal() {
     for(let i =  journal_list.length - 1; i >= 0; i--) {
         rev_journal_list.push(journal_list[i])
     }
+    
     return (
         <>
             <Navbar color="black"></Navbar>
@@ -53,7 +54,7 @@ function Journal() {
                 <div className='journal-content'>
                     <h1>JOURNAL.</h1>
                     {rev_journal_list.map(journal => {
-                        const journal_id = rev_journal_list.indexOf(journal) + 1
+                        const journal_id = journal_list.indexOf(journal) + 1
                         const JOURNAL_URL = "../journal/" + journal_id
                         return (
                             <div className='journal' key={journal_id}>

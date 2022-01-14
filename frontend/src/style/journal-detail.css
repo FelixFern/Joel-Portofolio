@@ -27,3 +27,13 @@
     margin: 0;
     padding: 0;
 }
+.journal-detail-parent .content h5, h6{
+    margin: 0;
+    text-align: center;
+    line-height: 0;
+}
+.journal-detail-parent .content h6 {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 0.75rem;
+}
