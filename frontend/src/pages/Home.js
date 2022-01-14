@@ -29,6 +29,7 @@ const WORKS = gql`
 
 `
 
+
 function Home() {
     const { loading, error, data } = useQuery(WORKS)
 
@@ -60,7 +61,7 @@ function Home() {
                 <div className='selected-work-container'>
                     {rev_work_list.map(work => {
                         const work_id = work_list.indexOf(work) + 1
-                        const DETAIL_URL = "project/"+ work_id
+                        const DETAIL_URL = "work/"+ work_id
                         return (
                             <>
                                 <Link key={work_id} to={DETAIL_URL} className='detail-link'>
@@ -68,7 +69,7 @@ function Home() {
                                         () => {
                                             setWork(work_id-1)
                                         }
-                                    }>{work.attributes.title}</h1>
+                                    }>{(work.attributes.title).toUpperCase()}</h1>
                                 </Link>
                             </>
                         )

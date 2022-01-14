@@ -1,0 +1,75 @@
+.journal-parent {
+    animation: fade-page .8s ease-in;
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 200px;
+    height: auto;
+    background-color: white;
+    position: absolute;
+}
+.journal-content {
+    width: 65%;
+    margin: auto;
+}
+.journal-content h1 {
+    margin-top: 10%;
+    font-size: 3rem;
+}
+.journal {
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
+    margin-bottom: 8%;
+    margin-top: 5%;
+}
+.journal h1 {
+    font-size: 1.5rem;
+    margin: auto;
+}
+.journal h3 {
+    line-height: none;
+    margin: 0;
+    font-weight: 400;
+    opacity: .75;
+}
+.journal .content {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    position: relative;
+    z-index: 99;
+    text-overflow: ellipsis;
+    height: 20vh;
+    font-size: 1rem;
+    line-height: 1rem;
+    max-height: 5rem;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.journal .read-more-btn h1{
+    transition: 0.8s;
+    z-index: 1;
+    font-size: 1rem;
+    border: 1px solid black;
+    opacity: 0;
+    color: black;
+    padding: 5px 15px;
+    transform: translateY(-50px);
+    position: absolute;
+}
+.journal:hover .read-more-btn h1{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
+    transform: translateY(20px);
+}
+.read-more-btn h1:hover {
+    transform: 0.8s;
+    background-color: black;
+    color: white;
+}

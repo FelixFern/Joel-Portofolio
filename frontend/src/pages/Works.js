@@ -50,7 +50,6 @@ const STILLS = gql`
 function Still() {
     const URL = "http://localhost:1337"
     const { loading, error, data } = useQuery(STILLS)
-    console.log(data)
     if (loading) return <p>Loading</p>
     if (error) return <p>Error</p>
 
@@ -64,7 +63,6 @@ function Still() {
     return(
         <>
             {rev_still_list.map(still => {
-                console.log(still)
                 const still_id = rev_still_list.indexOf(still)
                 return (
                     <div key={still_id} className='work-gallery still'>
@@ -83,7 +81,6 @@ function Motion() {
     if (loading) return <p>Loading</p>
     if (error) return <p>Error</p>
 
-    console.log(data)
     const motion_list = data.motions.data
     const rev_motion_list = []
 
@@ -142,11 +139,6 @@ function Works() {
                 </div>
                 <div className='works-content-parent'>
                     <WorksContainer view={workView}></WorksContainer>
-                    <WorksContainer view={workView}></WorksContainer>
-
-                    <WorksContainer view={workView}></WorksContainer>
-
-
                 </div>
             </div>
         </>

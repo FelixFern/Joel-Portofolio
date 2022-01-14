@@ -33,7 +33,7 @@ function Navbar(props) {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/journal" id={location.pathname.includes('journal') ? "current" : ""}> 
+                        <Link to="/journals" id={location.pathname.includes('journals') ? "current" : ""}> 
                             <p style={{"color" : props.color}}>Journal</p>
                         </Link>
                     </li>

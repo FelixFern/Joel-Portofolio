@@ -8,6 +8,7 @@ import About from './pages/About'
 import Journal from './pages/Journal'
 import WorkDetail from './pages/WorkDetail'
 import Works from './pages/Works'
+import JournalDetail from './pages/JournalDetail'
 
 
 const client = new ApolloClient({
@@ -23,9 +24,10 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/works" element={<Works />}></Route>
-                        <Route path="/project/:id" element={<WorkDetail/>}></Route>
+                        <Route path="/work/:id" element={<WorkDetail/>}></Route>
                         <Route path="/about" element={<About />} />
-                        <Route path="/journal" element={<Journal />} />
+                        <Route path="/journals" element={<Journal />} />
+                        <Route path="/journal/:id" element={<JournalDetail />}></Route>
                     </Routes>
                 </div>
             </ApolloProvider>

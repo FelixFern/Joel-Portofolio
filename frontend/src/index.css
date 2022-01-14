@@ -34,11 +34,10 @@ h1, h2, h3 {
 }
 .navbar {
   position: fixed;
-  display: flex;
-  width: 92.5%;
-  margin: auto;
-  justify-content: flex-end;
-  z-index: 99;
+  top: 3%;
+  right: 7.5%;
+  width: fit-content;
+  z-index: 100;
 }
 .navbar ul {
   width: fit-content;

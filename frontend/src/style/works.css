@@ -32,11 +32,11 @@
     border-bottom: 1.5px solid white;
 }
 .works-content-parent {
-    width: 75vw;
-    z-index: 100;
+    width: 85vw;
+    z-index: 99;
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 12%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -44,11 +44,10 @@
 }
 .work-gallery {
     position: relative;
-    width: 16.75vw;
-    height: 9.4218vw;
+    width: 18.75vw;
+    height: 10.54vw;
     display: inline-block;
-    padding-top: 0;
-    margin: 1vw;
+    margin-top: -5px;
 }
 .work-gallery img{
     width: 100%;
@@ -83,11 +82,11 @@
 .still {
     padding: 0.25vw;
     position: relative;
-    width: 32.5vw;
+    width: 24.5vw;
     height: fit-content;
     text-align: center;
 }
 .still img {
-    width: 32.5vw;
+    width: 24.5vw;
     height: auto;
 }

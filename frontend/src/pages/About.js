@@ -38,7 +38,7 @@ function About() {
     const URL = "http://localhost:1337"
 
     useEffect(() => {
-        document.title = "Joel Foo | About"
+        document.title = "Joel Foo | About";
     }, [])
 
     if (loading) return <p>Loading</p>
