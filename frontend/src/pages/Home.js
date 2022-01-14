@@ -63,15 +63,13 @@ function Home() {
                         const work_id = work_list.indexOf(work) + 1
                         const DETAIL_URL = "work/"+ work_id
                         return (
-                            <>
-                                <Link key={work_id} to={DETAIL_URL} className='detail-link'>
-                                    <h1 className={currentWork == work_id - 1 ? "current work-list" : "work-list"} onMouseOver={
-                                        () => {
-                                            setWork(work_id-1)
-                                        }
-                                    }>{(work.attributes.title).toUpperCase()}</h1>
-                                </Link>
-                            </>
+                            <Link key={work_id} to={DETAIL_URL} className='detail-link'>
+                                <h1 className={currentWork == work_id - 1 ? "current work-list" : "work-list"} onMouseOver={
+                                    () => {
+                                        setWork(work_id-1)
+                                    }
+                                }>{(work.attributes.title).toUpperCase()}</h1>
+                            </Link>
                         )
                     })} 
                 </div>

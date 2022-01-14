@@ -56,7 +56,7 @@ function Journal() {
                         const journal_id = rev_journal_list.indexOf(journal) + 1
                         const JOURNAL_URL = "../journal/" + journal_id
                         return (
-                            <div className='journal'>
+                            <div className='journal' key={journal_id}>
                                 <h1>{journal.attributes.title}</h1>
                                 <h3>{formatMyDate(journal.attributes.publishedAt)}</h3>
                                 <ReactMarkdown className='content'>
