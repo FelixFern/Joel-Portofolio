@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
@@ -33,7 +33,9 @@ function formatMyDate(value, locale = 'en-GB') {
 
 function Journal() {
     const { loading, error, data } = useQuery(JOURNALS)
-
+    useEffect(() => {
+        document.title = "Joel Foo | Journal"
+    }, [])
     if (loading) return <p>Loading</p>
     if (error) return <p>Error</p>
     console.log(data)
@@ -51,10 +53,9 @@ function Journal() {
                 <div className='journal-content'>
                     <h1>JOURNAL.</h1>
                     {rev_journal_list.map(journal => {
-                        const journal_id = rev_journal_list.indexOf(journal) 
-                        const JOURNAL_URL = "journal/" + journal_id
+                        const journal_id = rev_journal_list.indexOf(journal) + 1
+                        const JOURNAL_URL = "../journal/" + journal_id
                         return (
-                            <>
                             <div className='journal'>
                                 <h1>{journal.attributes.title}</h1>
                                 <h3>{formatMyDate(journal.attributes.publishedAt)}</h3>
@@ -65,7 +66,6 @@ function Journal() {
                                     <h1>Read More</h1>
                                 </Link>
                             </div>
-                            </>
                         )
                     })}
                     

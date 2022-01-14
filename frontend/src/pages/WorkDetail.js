@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'

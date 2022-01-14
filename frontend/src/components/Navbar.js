@@ -18,7 +18,7 @@ function Navbar(props) {
             <nav className='navbar'>
                 <ul>
                     <li>
-                        <Link to="/" id={(!location.pathname.includes('about') && !location.pathname.includes('journal')  && !location.pathname.includes("works")) ? "current" : ""}>
+                        <Link to="/" id={(!location.pathname.includes('about') && !location.pathname.includes('journal') && !location.pathname.includes("works")) ? "current" : ""}>
                             <p style={{"color" : props.color}}>Home</p>
                         </Link>
                     </li>
@@ -33,7 +33,7 @@ function Navbar(props) {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/journals" id={location.pathname.includes('journals') ? "current" : ""}> 
+                        <Link to="/journals" id={location.pathname.includes('journals') || location.pathname.includes('journal') ? "current" : ""}> 
                             <p style={{"color" : props.color}}>Journal</p>
                         </Link>
                     </li>

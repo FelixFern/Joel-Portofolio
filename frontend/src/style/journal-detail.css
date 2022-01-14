@@ -1,0 +1,29 @@
+.journal-detail-parent {
+    animation: fade-page .8s ease-in;
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 200px;
+    height: auto;
+    background-color: white;
+    position: absolute;
+}
+.journal-detail-parent .back-btn {
+    color: black;
+    -webkit-text-stroke: 0px var(--black-1);
+}
+.journal-detail-parent .journal-content {
+    width: 65%;
+    margin: auto;
+}
+.journal-detail-parent .journal-content h1 {
+    font-size: 2rem;
+}
+.journal-detail-parent .journal-content h3 {
+    margin-bottom: 50px;
+    line-height: 0;
+    font-weight: 400;
+}
+.journal-detail-parent .content {
+    margin: 0;
+    padding: 0;
+}
