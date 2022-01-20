@@ -95,9 +95,13 @@
         width: 5rem;
     }
     .work-gallery {
-        width: 60vw;
-        height: 33.75vw;
+        margin: auto;
+        width: 80vw;
+        height: 45vw;
         padding: 0;
+    }
+    .works-content-parent {
+        text-align: center;
     }
     .still img {
         width: 100%;

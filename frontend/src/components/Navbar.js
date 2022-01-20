@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { MdOutlineCheckBoxOutlineBlank } from 'react-icons/md' 
 
 function Navbar(props) {
     const [hamburger, setHamburger] = useState(true)
