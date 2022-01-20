@@ -76,20 +76,7 @@ h1, h2, h3 {
   transition: 0.8s;
   opacity: .5;
 }
-.box-white {
-  opacity: 1;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid white;
-  border-radius: 5px;
-}
-.box-black {
-  opacity: 1;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid black;
-  border-radius: 5px;
-}
+
 .rotate-ham {
   opacity: 1;
   transform: rotate(180deg) scale(0.8);
@@ -100,10 +87,7 @@ h1, h2, h3 {
   transition: .8s;
   transform: translateX(0px);
 }
-.display-none {
-  transition: .8s;
-  transform: translateX(400%);
-}
+
 @keyframes fade-page {
   0% {
       opacity: 0;
@@ -116,5 +100,23 @@ h1, h2, h3 {
 @media only screen and (max-width: 1000px) {
   .navbar ul li a {
     font-size: 0.8rem;
+  }
+  .display-none {
+    transition: .8s;
+    transform: translateX(400%);
+  }
+  .box-white {
+    opacity: 1;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  .box-black {
+    opacity: 1;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid black;
+    border-radius: 5px;
   }
 }
