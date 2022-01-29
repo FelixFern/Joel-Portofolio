@@ -26,7 +26,6 @@
     border-bottom: 1px solid white;
 }
 .works-parent .selector .current {
-    transition: .8s;
     font-weight: bold;
     border-bottom: 1.5px solid white;
 }

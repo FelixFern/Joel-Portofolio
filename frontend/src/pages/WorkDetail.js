@@ -47,7 +47,7 @@ function WorkDetail() {
     if (loading) return <p>Loading</p>
     if (error) return <p>Error</p>
     
-    const URL = "http://localhost:1337"
+    const URL = "https://joel-strapi-deploy.herokuapp.com"
     const THUMBNAIL_URL = URL + data.selectedWork.data.attributes.thumbnail.data.attributes.url
     const image_list = data.selectedWork.data.attributes.images.data
     document.title = "Project | " + data.selectedWork.data.attributes.title

@@ -40,7 +40,7 @@ function Journal() {
     if (error) return <p>Error</p>
     console.log(data)
     
-    const URL = "http://localhost:1337"
+    const URL = "https://joel-strapi-deploy.herokuapp.com"
     const journal_list = data.journals.data
     const rev_journal_list = []
 

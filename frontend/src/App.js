@@ -12,7 +12,7 @@ import JournalDetail from './pages/JournalDetail'
 
 
 const client = new ApolloClient({
-	uri : "http://localhost:1337/graphql", 
+	uri : "https://joel-strapi-deploy.herokuapp.com/graphql", 
 	cache: new InMemoryCache()
 })
 

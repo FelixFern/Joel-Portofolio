@@ -48,7 +48,7 @@ const STILLS = gql`
 
 
 function Still() {
-    const URL = "http://localhost:1337"
+    const URL = "https://joel-strapi-deploy.herokuapp.com"
     const { loading, error, data } = useQuery(STILLS)
     if (loading) return <p>Loading</p>
     if (error) return <p>Error</p>
@@ -75,7 +75,7 @@ function Still() {
 }
 
 function Motion() {
-    const URL = "http://localhost:1337"
+    const URL = "https://joel-strapi-deploy.herokuapp.com"
     const { loading, error, data } = useQuery(MOTIONS)
 
     if (loading) return <p>Loading</p>

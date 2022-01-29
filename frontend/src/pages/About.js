@@ -35,7 +35,7 @@ const ABOUT = gql`
 
 function About() {
     const { loading, error, data } = useQuery(ABOUT)
-    const URL = "http://localhost:1337"
+    const URL = "https://joel-strapi-deploy.herokuapp.com"
 
     useEffect(() => {
         document.title = "Joel Foo | About";
