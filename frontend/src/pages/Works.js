@@ -65,7 +65,7 @@ function Still() {
                 const still_id = rev_still_list.indexOf(still)
                 return (
                     <div key={still_id} className='work-gallery still'>
-                        <img src={URL + still.attributes.thumbnail.data.attributes.url}></img>
+                        <img src={still.attributes.thumbnail.data.attributes.url}></img>
                     </div>
                 )
             })}
@@ -96,7 +96,7 @@ function Motion() {
                             <div className='work-detail'>
                                 <h1>{motion.attributes.title}</h1>
                             </div>
-                            <img src={URL + motion.attributes.thumbnail.data.attributes.url}></img>
+                            <img src={motion.attributes.thumbnail.data.attributes.url}></img>
                         </div>
                     </a>
                 )

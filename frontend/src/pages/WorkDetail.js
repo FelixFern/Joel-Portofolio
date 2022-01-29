@@ -48,7 +48,7 @@ function WorkDetail() {
     if (error) return <p>Error</p>
     
     const URL = "https://joel-strapi-deploy.herokuapp.com"
-    const THUMBNAIL_URL = URL + data.selectedWork.data.attributes.thumbnail.data.attributes.url
+    const THUMBNAIL_URL = data.selectedWork.data.attributes.thumbnail.data.attributes.url
     const image_list = data.selectedWork.data.attributes.images.data
     document.title = "Project | " + data.selectedWork.data.attributes.title
 
@@ -78,7 +78,7 @@ function WorkDetail() {
                     <div className='image-gallery'>
                         {image_list.map(image => {
                             const image_id = image_list.indexOf(image)
-                            const IMG_URL = URL + image.attributes.url
+                            const IMG_URL = image.attributes.url
                             return(
                                 <img key={image_id} src={IMG_URL} className='image'></img>
                             )

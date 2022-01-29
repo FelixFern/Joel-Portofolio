@@ -51,7 +51,7 @@ function About() {
                 <div className='about-content'>
                     <h1>ABOUT ME.</h1>
                     <div className='desc'>
-                        <img className='profile-img' src={URL + data.aboutMe.data.attributes.profile.data.attributes.url}></img>
+                        <img className='profile-img' src={data.aboutMe.data.attributes.profile.data.attributes.url}></img>
                         <div className='desc-content'>
                             <ReactMarkdown>
                                 {data.aboutMe.data.attributes.desc}
