@@ -74,6 +74,10 @@
     background-color: black;
     color: white;
 }
+.journal-link-all {
+    text-decoration: none;
+    color: black;
+}
 @media only screen and (max-width: 1000px) {
     .journal-content h1 {
         padding-top: 20%;

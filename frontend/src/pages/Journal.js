@@ -59,14 +59,17 @@ function Journal() {
                         const JOURNAL_URL = "../journal/" + journal_id
                         return (
                             <div className='journal' key={journal_id}>
-                                <h1>{journal.attributes.title}</h1>
-                                <h3>{formatMyDate(journal.attributes.publishedAt)}</h3>
-                                <ReactMarkdown className='content'>
-                                    {journal.attributes.content}
-                                </ReactMarkdown>
-                                <Link className='read-more-btn' to={JOURNAL_URL}>
-                                    <h1>Read More</h1>
+                                <Link to={JOURNAL_URL} className='journal-link-all'>
+                                    <h1>{journal.attributes.title}</h1>
+                                    <h3>{formatMyDate(journal.attributes.publishedAt)}</h3>
+                                    <ReactMarkdown className='content'>
+                                        {journal.attributes.content}
+                                    </ReactMarkdown>
+                                    <Link className='read-more-btn' to={JOURNAL_URL}>
+                                        <h1>Read More</h1>
+                                    </Link>
                                 </Link>
+                                
                             </div>
                         )
                     })}
