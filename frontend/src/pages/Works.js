@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar'
 import { useQuery, gql } from '@apollo/client'
 
 import '../style/works.css'
-import { Link } from 'react-router-dom'
 
 
 const MOTIONS = gql`

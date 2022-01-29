@@ -2,6 +2,7 @@
     animation: fade-page .8s ease-in;
     width: 100vw;
     min-height: 100vh;
+    padding-bottom: 200px;
     height: auto;
     background-color: white;
     position: absolute;
@@ -72,4 +73,15 @@
     transform: 0.8s;
     background-color: black;
     color: white;
+}
+@media only screen and (max-width: 1000px) {
+    .journal-content h1 {
+        padding-top: 20%;
+    }
+    .journal h1 {
+        padding-top: 5%;
+    }
+    .journal {
+        padding-bottom: 30%;
+    }
 }
