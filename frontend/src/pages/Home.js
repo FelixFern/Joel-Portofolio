@@ -11,6 +11,7 @@ const WORKS = gql`
     query getWorks {
         selectedWorks {
             data {
+                id,
                 attributes {
                     title, 
                     year, 
@@ -50,7 +51,7 @@ function Home() {
     for(let i =  work_list.length - 1; i >= 0; i--) {
         rev_work_list.push(work_list[i])
     }
-    
+    console.log(rev_work_list)
     return (
         <div className='home-parent'>
             <Navbar color="white"></Navbar>
@@ -58,16 +59,16 @@ function Home() {
                 <div className='logo-container'>
                     <Link to="/" ><img className='logo' src={Logo}/></Link>
                 </div>
-                <img alt="work-image" className='image-work' src={currentWork != null ? work_list[currentWork].attributes.thumbnail.data.attributes.url : work_list[work_list.length-1].attributes.thumbnail.data.attributes.url}></img>
+                <img alt="work-image" className='image-work' src={currentWork != null ? currentWork : work_list[work_list.length-1].attributes.thumbnail.data.attributes.url}></img>
                 <div className='selected-work-container'>
                     {rev_work_list.map(work => {
-                        const work_id = work_list.indexOf(work) + 1
+                        const work_id = work.id
                         const DETAIL_URL = "work/"+ work_id
                         return (
                             <Link key={work_id} to={DETAIL_URL} className='detail-link'>
-                                <h1 className={currentWork == work_id - 1 ? "current work-list" : "work-list"} onMouseOver={
+                                <h1 className={currentWork == work.attributes.thumbnail.data.attributes.url ? "current work-list" : "work-list"} onMouseOver={
                                     () => {
-                                        setWork(work_id-1)
+                                        setWork(work.attributes.thumbnail.data.attributes.url)
                                     }
                                 }>{(work.attributes.title).toUpperCase()}</h1>
                             </Link>
