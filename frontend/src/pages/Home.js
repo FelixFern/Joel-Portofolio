@@ -6,6 +6,7 @@ import { useQuery, gql } from '@apollo/client'
 import '../style/home.css'
 import Logo from '../img/logo-white.png'
 import Navbar from '../components/Navbar'
+import LoadingPage from './LoadingPage'
 
 const WORKS = gql`
     query getWorks {
@@ -41,8 +42,8 @@ function Home() {
     }, [])
 
 
-    if (loading) return <p>Loading</p>
-    if (error) return <p>Error</p>
+    if (loading) return <LoadingPage/>
+    if (error) return <LoadingPage/>
 
     const URL = "https://joel-strapi-deploy.herokuapp.com"
     const work_list = (data.selectedWorks.data)

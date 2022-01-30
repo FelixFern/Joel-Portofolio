@@ -9,6 +9,7 @@ import Journal from './pages/Journal'
 import WorkDetail from './pages/WorkDetail'
 import Works from './pages/Works'
 import JournalDetail from './pages/JournalDetail'
+import LoadingPage from './pages/LoadingPage'
 
 
 const client = new ApolloClient({
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/about" element={<About />} />
                         <Route path="/journals" element={<Journal />} />
                         <Route path="/journal/:id" element={<JournalDetail />}></Route>
+                        <Route path="/test" element={<LoadingPage />}></Route>
                     </Routes>
                 </div>
             </ApolloProvider>
