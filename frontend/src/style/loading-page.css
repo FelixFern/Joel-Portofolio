@@ -7,9 +7,6 @@
     justify-content: center;
     align-items: center;
 }
-p {
-    color: white;
-}
 .shape {
     animation: animate 3s infinite alternate-reverse;
     margin: auto;

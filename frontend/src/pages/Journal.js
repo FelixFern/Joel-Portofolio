@@ -5,6 +5,8 @@ import ReactMarkdown from 'react-markdown'
 import { useQuery, gql } from '@apollo/client'
 
 import '../style/journal.css'
+import LoadingPage from './LoadingPage'
+
 
 const JOURNALS = gql` 
     query getJournals { 
@@ -36,8 +38,8 @@ function Journal() {
     useEffect(() => {
         document.title = "Joel Foo | Journal"
     }, [])
-    if (loading) return <p>Loading</p>
-    if (error) return <p>Error</p>
+    if (loading) return <LoadingPage></LoadingPage>
+    if (error) return <LoadingPage></LoadingPage>
     console.log(data)
     
     const URL = "https://joel-strapi-deploy.herokuapp.com"

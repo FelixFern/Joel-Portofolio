@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 
 import Navbar from '../components/Navbar'
 import '../style/journal-detail.css'
+import LoadingPage from './LoadingPage'
 
 const JOURNAL = gql`
     query getJournal($id:ID!) {
@@ -30,15 +31,15 @@ const JOURNAL = gql`
 function formatMyDate(value, locale = 'en-GB') {
     return new Date(value).toLocaleDateString(locale);
 }
-
 function JournalDetail() {
     const { id } = useParams()
     const { loading, error, data } = useQuery(JOURNAL, {
         variables: {id: id}
     })
     
-    if (loading) return <p>Loading</p>
-    if (error) return <p>Error</p>
+    if (loading) return <LoadingPage></LoadingPage>
+    if (error) return <LoadingPage></LoadingPage>
+
     console.log(data.journal.data.attributes.title)
     return (
         <>

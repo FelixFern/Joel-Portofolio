@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 
 import Navbar from '../components/Navbar'
 import '../style/work-detail.css'
+import LoadingPage from './LoadingPage'
 
 const WORK = gql`
     query getWork($id: ID!) {
@@ -44,8 +45,8 @@ function WorkDetail() {
         variables: {id: id}
     })
 
-    if (loading) return <p>Loading</p>
-    if (error) return <p>Error</p>
+    if (loading) return <LoadingPage />
+    if (error) return <LoadingPage />
     
     const URL = "https://joel-strapi-deploy.herokuapp.com"
     const THUMBNAIL_URL = data.selectedWork.data.attributes.thumbnail.data.attributes.url

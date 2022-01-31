@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { useQuery, gql } from '@apollo/client'
 
 import '../style/works.css'
+import LoadingPage from './LoadingPage'
 
 
 const MOTIONS = gql`
@@ -77,8 +78,8 @@ function Motion() {
     const URL = "https://joel-strapi-deploy.herokuapp.com"
     const { loading, error, data } = useQuery(MOTIONS)
 
-    if (loading) return <p>Loading</p>
-    if (error) return <p>Error</p>
+    if (loading) return <LoadingPage/>
+    if (error) return <LoadingPage/>
 
     const motion_list = data.motions.data
     const rev_motion_list = []
