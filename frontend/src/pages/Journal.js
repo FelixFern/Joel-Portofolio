@@ -42,7 +42,6 @@ function Journal() {
     if (error) return <LoadingPage></LoadingPage>
     console.log(data)
     
-    const URL = "https://joel-strapi-deploy.herokuapp.com"
     const journal_list = data.journals.data
     const rev_journal_list = []
 

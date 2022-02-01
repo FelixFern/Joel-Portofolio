@@ -45,7 +45,6 @@ function Home() {
     if (loading) return <LoadingPage/>
     if (error) return <LoadingPage/>
 
-    const URL = "https://joel-strapi-deploy.herokuapp.com"
     const work_list = (data.selectedWorks.data)
     const rev_work_list = []
 
